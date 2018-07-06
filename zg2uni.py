@@ -26,12 +26,19 @@ def convert(input):
 
 	output = input
 
-	output = output.replace(u'\u106A', u'\1009')
+	output = output.replace(u'\u106A', u'\1009') #nya_lay_to_nya_gyi
 
-	output = re.sub(u'[\u103B\u107E\u107F\u1080\u1081\u1082\u1083\u1084]', u'\u103C', output)
+	output = re.sub(u'[\u103B\u107E\u107F\u1080\u1081\u1082\u1083\u1084]', u'\u103C', output) #ya_yit
 	output = re.sub(u'(\u103A)(\u1037)', u"\\2\\1", output);
 	output = output.replace(u'\u103A\u1037', u'\u1037\u103A')
 	output = output.replace(u'\u1075', u'\u1039\u1012')
 
+        output = re.sub(u'\u106b', u'\u100a', output) #nya
+        output = re.sub(u'\u1086', u'\u103f', output) #tha_gyi
+        output = re.sub(u'\u1033', u'\u102f', output) #ta_chaung_ngyin
+        output = re.sub(u'\u1034', u'\u1030', output) #nat_chaung_ngyin
+        output = re.sub(u'[\u103d\u1087]', u'\u103e', output) #hat_htoe
+        output = re.sub(u'\u103c', u'\u103d', output) #wa_swal
+        output = re.sub(u'[\u103a\u107d]', u'\103b', output) #ya_pint
 
 	return output
