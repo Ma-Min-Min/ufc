@@ -49,4 +49,20 @@ def convert(input):
     output = re.sub(u'\u108f', u'\u1014', output) # na_nge
     output = re.sub(u'\u104e', u'\u104e\u1044\u103a\u1038', output) # le_gaung
 
+# nga_sint
+
+    output = re.sub(u'([\u1000-\u1021])\u1064', u'\u1064\\1', output)
+    output = re.sub(u'([\u1000-\u1021])\u108b', u'\u1064\\1\u102d', output)
+    output = re.sub(u'([\u1000-\u1021])\u108c', u'\u1064\\1\u102e', output)
+    output = re.sub(u'([\u1000-\u1021])\u108d', u'\u1064\\1\u1036', output)
+    output = re.sub(u'\u1064', u'\u1004\u103a\u1039', output)
+    output = re.sub(u'\u108e', u'\u102d\u1036', output)
+
+    output = re.sub(u'\u105a', u'\u102b\u102c', output) # yaychar_hathtoe
+    output = re.sub(u'\u1088', u'\u103e\u102f', output) # hahtoe_and_ta_chaung_ngin
+    output = re.sub(u'\u1089', u'\u103e\u1030', output) # hahtoe_and_na_chaung_ngin
+    output = re.sub(u'\u108a', u'\u103d\u103e', output) # wa_swal
+
+    
+
     return output
