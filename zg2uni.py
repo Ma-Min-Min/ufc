@@ -3,10 +3,8 @@ import re
 
 
 def convert(input):
-
-# replace for each zawgyi code to unicode character
-	
     output = input
+
     
     output = output.replace(u'\u106a', u'\u1009') # nya_lay
     output = re.sub(u'\u106b', u'\u100a', output) # nya
@@ -23,7 +21,7 @@ def convert(input):
     output = re.sub(u'[\u1037\u1094\u1095]', u'\u1037', output) # aut_myit
     output = re.sub(u'\u108f', u'\u1014', output) # na_nge
 
-# nga_sint
+    # nga_sint
 
     output = re.sub(u'([\u1000-\u1021])\u1064', u'\u1064\\1', output)
     output = re.sub(u'([\u1000-\u1021])\u108b', u'\u1064\\1\u102d', output)
@@ -32,10 +30,12 @@ def convert(input):
     output = re.sub(u'\u1064', u'\u1004\u103a\u1039', output)
     output = re.sub(u'\u108e', u'\u102d\u1036', output)
 
-    output = re.sub(u'\u1088', u'\u103e\u102f', output) # hahtoe_and_ta_chaung_ngin
-    output = re.sub(u'\u1089', u'\u103e\u1030', output) # hahtoe_and_na_chaung_ngin
+
+    output = re.sub(u'\u1088', u'\u103e\u102f', output)  # hahtoe_and_ta_chaung_ngin
+    output = re.sub(u'\u1089', u'\u103e\u1030', output)  # hahtoe_and_na_chaung_ngin
     output = re.sub(u'\u105a', u'\u102b\u102c', output)  # yaychar_hathtoe
-    output = re.sub(u'\u108a', u'\u103d\u103e', output) # wa_swal
+    output = re.sub(u'\u108a', u'\u103d\u103e', output)  # wa_swal
+
  
 # pat_sint
 
@@ -66,9 +66,9 @@ def convert(input):
     output = re.sub(u'\u1091', u'\u100f\u1039\u100d', output) # na_gyi_and_da_yin_guat
     output = re.sub(u'\u1092', u'\u100b\u1039\u100c', output) # ddlg&twb
     output = re.sub(u'\u1097', u'\u100b\u1039\u100b', output) # twiceddlg
-    
 
     return output
+    
 
 def visual2logical(input):
     # reorder the sequence of characters from visual to logical
@@ -80,6 +80,6 @@ def visual2logical(input):
     ## for ta/na_chuangngin and longgyitin(sanke)
     output = re.sub(u'(\u102f)([\u102d\u102e])', '\\2\\1', output)
     output = re.sub(u'(\u1030)([\u102d\u102e])', '\\2\\1', output)
-
+    
     return output
 
