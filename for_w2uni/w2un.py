@@ -40,3 +40,26 @@ def replace(input)
     output = re.sub(u'\u005b', u'\u101f', output)  # ha
     output = re.sub(u'\u0056', u'\u1020', output)  # la_gyi
     output = re.sub(u'\u0074', u'\u1021', output)  # aa
+
+    output = re.sub(u'\u00fe', u'\u1024', output) # ai
+    output = re.sub(u'[\u004f\u00cd]', u'\u1025', output)  # au
+    output = re.sub(u'\u007b', u'\u1027', output) # at_kayar_au
+    output = re.sub(u'\u0067', u'\u102b', output) # mout_cha
+    output = re.sub(u'\u006d', u'\u102c', output) # wide_cha
+    output = re.sub(u'\u0064', u'\u102d', output) # lone_gyi_tin
+    output = re.sub(u'\u0044', u'\u102e', output) # lone_gyi_tin_sankat
+    output = re.sub(u'\u1025\u102e', u'\u1026', output) # lone_gyi_tin_sankat_oo
+    output = re.sub(u'[\u004b\u006b]', u'\u102f', output) # ta_chaung_ngin
+    output = re.sub(u'[\u004c\u006c]', u'\u1030', output) # na_chaung_ngin
+    output = re.sub(u'\u0061', u'\u1031', output) # tha_wai_htoe
+    output = re.sub(u'\u004a', u'\u1032', output) # nout_htoe_pyit
+    output = re.sub(u'\u0048', u'\u1036', output) # taytay_tin
+    output = re.sub(u'[\u0055\u0059\u0068]', u'\u1037', output) # out_myit
+    output = re.sub(u'\u003b', u'\u1038', output) # wa_sa_pout
+    output = re.sub(u'\u0066', u'\u103a', output) # nga_tat
+    output = re.sub(u'[\u0073\u00df]', u'\u103b', output) # ya_pint
+    output = re.sub(u'\u1005\u103b', u'\u1008', output) # za_myit_zwe
+    output = re.sub(u'[\u006A\u0042\u004d\u004e\u0060\u007e]', u'\u103c', output) # ya_yit
+    output = re.sub(u'\u0047', u'\u103d', output) # wa_swe
+    output = re.sub(u'[\u0053\u00a7]', u'\u103e', output) # ha_toe
+    output = re.sub(u'\u00f3', u'\u003f', output) # ta_gyi
