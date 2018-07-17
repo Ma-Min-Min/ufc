@@ -63,3 +63,22 @@ def replace(input)
     output = re.sub(u'\u0047', u'\u103d', output) # wa_swe
     output = re.sub(u'[\u0053\u00a7]', u'\u103e', output) # ha_toe
     output = re.sub(u'\u00f3', u'\u003f', output) # ta_gyi
+
+    # numbers
+    output = re.sub(u'\u0031', u'\u1041', output)  # one
+    output = re.sub(u'\u0032', u'\u1042', output)  # two
+    output = re.sub(u'\u0033', u'\u1043', output)  # three
+    output = re.sub(u'\u0034', u'\u1044', output)  # four
+    output = re.sub(u'\u0035', u'\u1045', output)  # five
+    output = re.sub(u'\u0036', u'\u1046', output)  # six
+    output = re.sub(u'\u0037', u'\u1047', output)  # seven
+    output = re.sub(u'\u0038', u'\u1048', output)  # eight
+    output = re.sub(u'\u0039', u'\u1049', output)  # nine
+
+    return output
+
+def decompose(input):
+    
+    output = input
+
+
