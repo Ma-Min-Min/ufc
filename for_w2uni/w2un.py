@@ -80,5 +80,54 @@ def replace(input)
 def decompose(input):
     
     output = input
+    output = re.sub(u'\u003a', u'\u102b\u103a', output) # yaychar_shayhtoe
+    output = re.sub(u'[\u003c\u003e]', u'\u103c\u103d', output) # yayit_waswe
+    output = re.sub(u'\u0040', u'\u100f\u1039\u100d', output) # nagyi_sint_dayinkout
+    output = re.sub(u'\u0049', u'\u103e\u102f', output) # hatoe_ta_chaung_ngin
+    output = re.sub(u'\u0051', u'\u103b\u103e', output) # yapint_hatoe
+    output = re.sub(u'\u0052', u'\u103b\u103d', output) # yapint_waswal
+    output = re.sub(u'\u0054', u'\u103d\u103e', output) # waswal_hatoe
+    output = re.sub(u'\u0057', u'\u103b\u103d\u103e', output) # yapint_waswal_hatoe
+    output = output.replace(u'\u007c', u'\u100b\u1039\u100c') # ttlg_with_twb
+    output = re.sub(u'\u00aa', u'\u103e\u1030', output) # hatoe_na_chaung_ngin
 
+    # pat_sint
+    
+    output = re.sub(u'\u00a2', u'\u1039\u1003', output) # ga_gyi
+    output = re.sub(u'\u00a5', u'\u100b\u1039\u100b', output) # double_ta_talin_chake
+    output = re.sub(u'\u00a6', u'\u1039\u1011', output) # hta_sin_htoo
+    output = re.sub(u'\u00a8', u'\u1039\u1013', output) # da_out_chai
+    output = re.sub(u'\u00a9', u'\u1039\u1001', output) # ka_kwe
+    output = re.sub(u'[\u00ac\u00c7]', u'\u1039\u1018', output) # ba_gone
+    output = re.sub(u'\u00ae', u'\u1039\u1019', output) # ma
+    output = re.sub(u'\u00b2', u'\u1039\u100c', output) # hta_wen_bae
+    output = re.sub(u'\u00b3', u'\u1039\u100b', output) # ta_talin_chake
+    output = re.sub(u'\u00b4', u'\u1039\u1012', output) # da_dway
+    output = re.sub(u'\u00b9', u'\u100d\u1039\u100e', output) # da_yin_mote_with_da_yin_gaut
+    output = re.sub(u'\u00be', u'\u1039\u1002', output) # ga_nge
+    output = re.sub(u'\u00c1', u'\u1039\u1017', output) # ba_htet_chai
+    output = re.sub(u'[\u00c5\u00e5]', u'\u1039\u1010', output) # ta_win_pu
+    output = re.sub(u'\u00c6', u'\u1039\u1007', output) # za_gwal
+    output = re.sub(u'\u00c9', u'\u1039\u1010\u103d', output) # twa
+    output = re.sub(u'\u00d1', u'\u1039\u1008', output) # za_myin_zwe
+    output = re.sub(u'\u00d3', u'\u1009\u102c', output) # nya_with_yaychar
+    output = re.sub(u'\u00d6', u'\u1039\u100f', output) # na_gyi
+    output = re.sub(u'\u00d7', u'\u100d\u1039\u100d', output) # double_da_yin_gout
+    output = re.sub(u'\u00dc', u'\u1039\u1015', output) # pa_sout
+    output = re.sub(u'\u00e4', u'\u1039\u1006', output) # sa_lane
+    output = re.sub(u'\u00e6', u'\u1039\u1016', output) # pha_oo_htoke
+    output = re.sub(u'\u00e9', u'\u1039\u1014', output) # na_nge
+    output = re.sub(u'\u00f6', u'\u1039\u1005', output) # sa_lone
+    output = re.sub(u'\u00fa', u'\u1039\u1000', output) # ka_gyi
+    output = re.sub(u'\u2019', u'\u1039\u101c', output) # la
+
+    # nga_sint
+    output = re.sub(u'([\u1000-\u1021])\u0046', u'\u0046\\1', output)  # simple
+    output = re.sub(u'([\u1000-\u1021])\u00d0', u'\u0046\\1\u102e', output) # lone_gyi_tin_sankat
+    output = re.sub(u'([\u1000-\u1021])\u00d8', u'\u0046\\1\u102d', output) # lone_gyi_tin
+    output = re.sub(u'([\u1000-\u1021])\u00f8', u'\u0046\\1\u1036', output) # tay_tay_tin
+    output = re.sub(u'\u0046', u'\u1004\u103a\u1039', output) # lone_gyi_tin_and_tay_tay_tin
+    output = re.sub(u'\u00f0', u'\u102d\u1036', output) # na
+
+    return output
 
