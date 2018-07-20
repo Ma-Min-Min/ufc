@@ -131,3 +131,22 @@ def decompose(input):
 
     return output
 
+def visual2logical(input):
+    # reorder the sequence of characters from visual to logical
+    output = input
+    ## 1=tawaetoe 2=yayit 3=letter 4=yapint 5=waswe 6=hatoe 7=aumyit 8=yaychar
+    output = re.sub(u'((?:\u1031)?)((?:\u103c)?)([\u1000-\u1021])((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)', '\\3\\2\\4\\5\\6\\1\\7\\8', output)
+    output = re.sub(u'\u00fb([\u1000-\u1021])', u"\\1\u103c\u102f", output)  # yayit_1cn
+    output = re.sub(u'\u00ea([\u1000-\u1021])', u'\\1\u103c\u102f', output)  # yayit_1cn
+
+    return output
+
+
+def convert(input):
+
+    output = replace(input)
+    output = decompose(output)
+    output = visual2logical(output)
+
+    return output
+
