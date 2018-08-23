@@ -4,7 +4,7 @@
 # Example: main.py zawgyi.txt unicode.txt
 
 import codecs
-import unitozg
+import uni2zg
 import sys
 
 input_file_name = sys.argv[1]
