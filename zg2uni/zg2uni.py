@@ -2,7 +2,7 @@
 import re
 
 
-def convert(input):
+def replace(input):
     output = input
 
     
@@ -81,5 +81,15 @@ def visual2logical(input):
     output = re.sub(u'(\u102f)([\u102d\u102e])', '\\2\\1', output)
     output = re.sub(u'(\u1030)([\u102d\u102e])', '\\2\\1', output)
     
+    return output
+
+def convert(input):
+
+    output = input
+
+    output = replace(output)
+    output = decompose(output)
+    output = visual2logical(output)
+
     return output
 
