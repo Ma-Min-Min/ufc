@@ -88,7 +88,6 @@ def convert(input):
     output = input
 
     output = replace(output)
-    output = decompose(output)
     output = visual2logical(output)
 
     return output
