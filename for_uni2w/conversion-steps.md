@@ -1,10 +1,13 @@
 # For Uni to Win
 
 ### Convertion Step One
-First convert all unicode code points to WinInnwa code points
+First change from logical order to visual order
 
 ### Convertion Step Two
-Second precompose certain unicode code points to WinInnwa code points
+Second change the shape for visual look
 
 ### Convertion Step Three
-Third change from visual order to logical order
+Third convert all Unicode code points to WinInnwa code points
+
+### Convertion Step Four
+Fourth precompose certain Unicode code points to WinInnwa code points
